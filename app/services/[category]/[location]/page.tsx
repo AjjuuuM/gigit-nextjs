@@ -101,8 +101,8 @@ export default async function ServiceLocationPage({
                   { img: "/assets/icons/image1.jpg", name: "Sukhumvit" },
                 ].map(({ img, name }) => (
                   <div key={name} className="flex flex-col items-center">
-                    <Image src={img} alt={name} width={359} height={384} className="w-[359px] h-[384px] object-cover" />
-                    <h3 className="mt-[36px] text-[36px] leading-[44px] font-semibold tracking-[-0.02em] text-white text-center">{name}</h3>
+                    <Image src={img} alt={name} width={359} height={384} className="w-full h-[280px] sm:h-[384px] object-cover" />
+                    <h3 className="mt-[24px] sm:mt-[36px] text-[28px] sm:text-[36px] leading-[36px] sm:leading-[44px] font-semibold tracking-[-0.02em] text-white text-center">{name}</h3>
                   </div>
                 ))}
               </div>
@@ -126,7 +126,7 @@ export default async function ServiceLocationPage({
                 "Highly recommend! Great communication and quality work throughout.",
                 "Amazing experience. Will definitely use gigit again for future tasks.",
               ].map((review, i) => (
-                <div key={i} className="w-[359px] h-[404px] bg-[#F7F8F9] rounded-[6px] shadow-sm p-[32px] flex flex-col justify-between">
+                <div key={i} className="w-full sm:w-[359px] min-h-[320px] sm:min-h-[404px] bg-[#F7F8F9] rounded-[6px] shadow-sm p-[24px] sm:p-[32px] flex flex-col justify-between">
                   <div>
                     <div className="flex gap-[4px] text-[#FFC107] text-[18px]">★★★★★</div>
                     <p className="mt-[24px] text-[18px] leading-[28px] font-medium text-[#556987]">{review}</p>
@@ -171,20 +171,37 @@ export default async function ServiceLocationPage({
         <WaveDivider />
 
         {/* FEATURES */}
-        <section className="bg-white py-24">
+        <section className="bg-white py-16 sm:py-24">
           <div className="max-w-6xl mx-auto px-6 text-center">
             <div className="inline-flex items-center bg-[#FE6807] text-white text-[12px] font-medium px-3 py-[3px] rounded-full">
               FEATURES
             </div>
-            <h2 className="mt-6 text-[36px] leading-[44px] font-bold text-[#2A3342] tracking-[-0.02em]">
+            <h2 className="mt-6 text-[28px] sm:text-[36px] leading-[36px] sm:leading-[44px] font-bold text-[#2A3342] tracking-[-0.02em]">
               Built for Safe &amp; Reliable Task Hiring
             </h2>
-            <p className="mt-4 text-[20px] leading-[30px] font-medium text-[#556987] max-w-2xl mx-auto">
+            <p className="mt-4 text-[18px] sm:text-[20px] leading-[28px] sm:leading-[30px] font-medium text-[#556987] max-w-2xl mx-auto">
               Everything you need to hire and work with confidence.
             </p>
           </div>
-          <div className="mt-24 max-w-6xl mx-auto px-6 grid grid-cols-3 items-center gap-x-10">
-            {/* Left column */}
+          {/* Mobile layout */}
+          <div className="mt-10 max-w-6xl mx-auto px-6 grid grid-cols-2 gap-8 md:hidden">
+            {[
+              { icon: "/assets/icons/1.png", title: "Verified\nProfiles", desc: "Know who you're hiring with verified accounts" },
+              { icon: "/assets/icons/2.png", title: "Ratings &\nReviews", desc: "See real feedback before choosing a worker" },
+              { icon: "/assets/icons/3.png", title: "Escrow\nPayments", desc: "No upfront risk – payment released after customer approval." },
+              { icon: "/assets/icons/4.png", title: "Set your\nbudget", desc: "Set your own budget and compare offers to choose the best value" },
+            ].map(({ icon, title, desc }) => (
+              <div key={title} className="text-center">
+                <div className="w-14 h-14 mx-auto flex items-center justify-center bg-[#FE6807] rounded-xl">
+                  <Image src={icon} alt="" width={24} height={24} className="w-6 h-6" />
+                </div>
+                <h3 className="mt-4 text-[18px] leading-[26px] font-bold text-[#2A3342] whitespace-pre-line">{title}</h3>
+                <p className="mt-2 text-[14px] leading-[22px] font-medium text-[#556987]">{desc}</p>
+              </div>
+            ))}
+          </div>
+          {/* Desktop layout */}
+          <div className="hidden md:grid mt-16 max-w-6xl mx-auto px-6 grid-cols-3 items-center gap-x-10">
             <div className="space-y-24">
               {[
                 { icon: "/assets/icons/1.png", title: "Verified\nProfiles", desc: "Know who you're hiring with verified accounts" },
@@ -199,11 +216,9 @@ export default async function ServiceLocationPage({
                 </div>
               ))}
             </div>
-            {/* Center phone */}
             <div className="flex justify-center">
               <Image src="/assets/iphoneservice.png" alt="Mobile Preview" width={261} height={500} className="w-[261px] h-auto" />
             </div>
-            {/* Right column */}
             <div className="space-y-24">
               {[
                 { icon: "/assets/icons/3.png", title: "Escrow\nPayments", desc: "No upfront risk – payment released after customer approval." },
@@ -231,10 +246,10 @@ export default async function ServiceLocationPage({
                 <path d="M6 9L12 15L18 9" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
-            <div className="grid grid-cols-3 gap-y-[20px] gap-x-[60px] mt-[32px]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-[20px] gap-x-[40px] lg:gap-x-[60px] mt-[32px]">
               {districts.map((d) => (
                 <Link key={d} href={`/services/${category}/${location}/${d.toLowerCase().replace(/\s+/g, "-")}`}>
-                  <span className="text-[20px] leading-[30px] font-medium hover:underline cursor-pointer">
+                  <span className="text-[18px] sm:text-[20px] leading-[28px] sm:leading-[30px] font-medium hover:underline cursor-pointer">
                     {categoryName} {d}, {locationName}
                   </span>
                 </Link>
@@ -243,15 +258,15 @@ export default async function ServiceLocationPage({
 
             <div className="mt-[80px]">
               <div className="flex items-center justify-between border-b border-white/40 pb-[12px]">
-                <h3 className="text-[30px] leading-[38px] font-medium">Other Services</h3>
+                <h3 className="text-[24px] sm:text-[30px] leading-[32px] sm:leading-[38px] font-medium">Other Services</h3>
                 <svg className="w-[20px] h-[20px]" viewBox="0 0 24 24" fill="none">
                   <path d="M6 9L12 15L18 9" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </div>
-              <div className="grid grid-cols-3 gap-y-[20px] gap-x-[60px] mt-[32px]">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-[20px] gap-x-[40px] lg:gap-x-[60px] mt-[32px]">
                 {["Cleaning", "Handyman", "Massage", "Laundry", "Plumbing", "Tutoring", "Air Conditioner Cleaning", "Air Conditioner Technician", "Delivery", "Moving", "Painting", "Gardening"].map((s) => (
                   <Link key={s} href={`/services/${s.toLowerCase().replace(/\s+/g, "-")}`}>
-                    <span className="text-[20px] leading-[30px] font-medium hover:underline cursor-pointer">{s}</span>
+                    <span className="text-[18px] sm:text-[20px] leading-[28px] sm:leading-[30px] font-medium hover:underline cursor-pointer">{s}</span>
                   </Link>
                 ))}
               </div>

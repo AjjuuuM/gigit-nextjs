@@ -92,8 +92,8 @@ export default function HowItWorksPage() {
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid items-start gap-12 lg:gap-16 lg:grid-cols-2">
               {/* Left: Mobile image */}
-              <div className="order-2 lg:order-1 flex justify-start -ml-8 lg:-ml-56">
-                <div className="w-[420px] sm:w-[480px] lg:w-[540px] xl:w-[600px]">
+              <div className="order-2 lg:order-1 flex justify-center lg:justify-start lg:-ml-56">
+                <div className="w-full max-w-[420px] sm:max-w-[480px] lg:w-[540px] xl:w-[600px]">
                   <Image
                     src="/assets/Group1.png"
                     alt="Gigit mobile app"
@@ -151,48 +151,58 @@ export default function HowItWorksPage() {
             </p>
           </div>
 
-          <div className="mt-24 max-w-6xl mx-auto px-6 grid grid-cols-3 items-center gap-x-10">
-            {/* Left Column */}
-            <div className="space-y-24">
+          {/* Mobile: stacked grid; Desktop: 3-col with phone center */}
+          <div className="mt-16 max-w-6xl mx-auto px-6">
+            {/* Mobile layout */}
+            <div className="grid grid-cols-2 gap-8 md:hidden">
               {[
                 { icon: "/assets/icons/1.png", title: "Verified\nProfiles", desc: "Know who you're hiring with verified accounts" },
                 { icon: "/assets/icons/2.png", title: "Ratings &\nReviews", desc: "See real feedback before choosing a worker" },
-              ].map(({ icon, title, desc }) => (
-                <div key={title} className="text-center">
-                  <div className="w-16 h-16 mx-auto flex items-center justify-center bg-[#FE6807] rounded-xl">
-                    <Image src={icon} alt="" width={24} height={24} className="w-6 h-6" />
-                  </div>
-                  <h3 className="mt-6 text-[24px] leading-[32px] font-bold text-[#2A3342] whitespace-pre-line">{title}</h3>
-                  <p className="mt-3 text-[16px] leading-[24px] font-medium text-[#556987]">{desc}</p>
-                </div>
-              ))}
-            </div>
-
-            {/* Center Phone */}
-            <div className="flex justify-center">
-              <Image
-                src="/assets/iphoneservice.png"
-                alt="Mobile Preview"
-                width={261}
-                height={500}
-                className="w-[261px] h-auto"
-              />
-            </div>
-
-            {/* Right Column */}
-            <div className="space-y-24">
-              {[
                 { icon: "/assets/icons/3.png", title: "Escrow\nPayments", desc: "No upfront risk – payment released after customer approval." },
                 { icon: "/assets/icons/4.png", title: "Set your\nbudget", desc: "Set your own budget and compare offers to choose the best value" },
               ].map(({ icon, title, desc }) => (
                 <div key={title} className="text-center">
-                  <div className="w-16 h-16 mx-auto flex items-center justify-center bg-[#FE6807] rounded-xl">
+                  <div className="w-14 h-14 mx-auto flex items-center justify-center bg-[#FE6807] rounded-xl">
                     <Image src={icon} alt="" width={24} height={24} className="w-6 h-6" />
                   </div>
-                  <h3 className="mt-6 text-[24px] leading-[32px] font-bold text-[#2A3342] whitespace-pre-line">{title}</h3>
-                  <p className="mt-3 text-[16px] leading-[24px] font-medium text-[#556987]">{desc}</p>
+                  <h3 className="mt-4 text-[18px] leading-[26px] font-bold text-[#2A3342] whitespace-pre-line">{title}</h3>
+                  <p className="mt-2 text-[14px] leading-[22px] font-medium text-[#556987]">{desc}</p>
                 </div>
               ))}
+            </div>
+            {/* Desktop layout */}
+            <div className="hidden md:grid grid-cols-3 items-center gap-x-10 mt-8">
+              <div className="space-y-24">
+                {[
+                  { icon: "/assets/icons/1.png", title: "Verified\nProfiles", desc: "Know who you're hiring with verified accounts" },
+                  { icon: "/assets/icons/2.png", title: "Ratings &\nReviews", desc: "See real feedback before choosing a worker" },
+                ].map(({ icon, title, desc }) => (
+                  <div key={title} className="text-center">
+                    <div className="w-16 h-16 mx-auto flex items-center justify-center bg-[#FE6807] rounded-xl">
+                      <Image src={icon} alt="" width={24} height={24} className="w-6 h-6" />
+                    </div>
+                    <h3 className="mt-6 text-[24px] leading-[32px] font-bold text-[#2A3342] whitespace-pre-line">{title}</h3>
+                    <p className="mt-3 text-[16px] leading-[24px] font-medium text-[#556987]">{desc}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="flex justify-center">
+                <Image src="/assets/iphoneservice.png" alt="Mobile Preview" width={261} height={500} className="w-[261px] h-auto" />
+              </div>
+              <div className="space-y-24">
+                {[
+                  { icon: "/assets/icons/3.png", title: "Escrow\nPayments", desc: "No upfront risk – payment released after customer approval." },
+                  { icon: "/assets/icons/4.png", title: "Set your\nbudget", desc: "Set your own budget and compare offers to choose the best value" },
+                ].map(({ icon, title, desc }) => (
+                  <div key={title} className="text-center">
+                    <div className="w-16 h-16 mx-auto flex items-center justify-center bg-[#FE6807] rounded-xl">
+                      <Image src={icon} alt="" width={24} height={24} className="w-6 h-6" />
+                    </div>
+                    <h3 className="mt-6 text-[24px] leading-[32px] font-bold text-[#2A3342] whitespace-pre-line">{title}</h3>
+                    <p className="mt-3 text-[16px] leading-[24px] font-medium text-[#556987]">{desc}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>

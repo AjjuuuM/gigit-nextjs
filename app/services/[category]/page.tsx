@@ -171,8 +171,8 @@ export default async function CategoryServicePage({
                   { img: "/assets/icons/image1.jpg", city: "Phuket" },
                 ].map(({ img, city }) => (
                   <div key={city}>
-                    <Image src={img} alt={city} width={359} height={384} className="w-[359px] h-[384px] object-cover" />
-                    <h3 className="mt-[36px] text-[36px] leading-[44px] font-semibold tracking-[-0.02em] text-white">{city}</h3>
+                    <Image src={img} alt={city} width={359} height={384} className="w-full h-[280px] sm:h-[384px] object-cover" />
+                    <h3 className="mt-[24px] sm:mt-[36px] text-[28px] sm:text-[36px] leading-[36px] sm:leading-[44px] font-semibold tracking-[-0.02em] text-white">{city}</h3>
                   </div>
                 ))}
               </div>
@@ -208,8 +208,8 @@ export default async function CategoryServicePage({
         <section className="bg-[#191BDF] text-white py-16 sm:py-20 lg:py-24">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid items-start gap-12 lg:gap-16 lg:grid-cols-2">
-              <div className="order-2 lg:order-1 flex justify-start -ml-8 lg:-ml-56">
-                <div className="w-[420px] sm:w-[480px] lg:w-[540px] xl:w-[600px]">
+              <div className="order-2 lg:order-1 flex justify-center lg:justify-start lg:-ml-56">
+                <div className="w-full max-w-[420px] sm:max-w-[480px] lg:w-[540px] xl:w-[600px]">
                   <Image src="/assets/Group1.png" alt="Gigit mobile app" width={600} height={700} className="w-full h-auto object-contain" />
                 </div>
               </div>
@@ -244,15 +244,15 @@ export default async function CategoryServicePage({
         <WaveDivider />
 
         {/* FEATURES */}
-        <section className="bg-white pt-[120px] pb-[140px]">
+        <section className="bg-white pt-[80px] sm:pt-[120px] pb-[80px] sm:pb-[140px]">
           <div className="max-w-[1140px] mx-auto px-6 text-center">
             <div className="inline-flex items-center bg-[#FE6807] text-white text-[12px] font-medium uppercase rounded-full px-[8px] py-[2px]">
               FEATURES
             </div>
-            <h2 className="mt-[20px] text-[48px] leading-[60px] font-bold tracking-[-0.02em] text-[#2A3342] max-w-[919px] mx-auto">
+            <h2 className="mt-[20px] text-[32px] sm:text-[48px] leading-[40px] sm:leading-[60px] font-bold tracking-[-0.02em] text-[#2A3342] max-w-[919px] mx-auto">
               What does a {categoryName} service near me include?
             </h2>
-            <p className="mt-[24px] max-w-[919px] mx-auto text-[20px] leading-[30px] font-medium text-[#556987]">
+            <p className="mt-[24px] max-w-[919px] mx-auto text-[18px] sm:text-[20px] leading-[28px] sm:leading-[30px] font-medium text-[#556987]">
               A professional {categoryName} service typically covers inspection, preparation, execution, and final quality checks. The exact scope depends on the type of work required, but experienced providers ensure safety, efficiency, and long-lasting results.
             </p>
           </div>
@@ -260,27 +260,26 @@ export default async function CategoryServicePage({
 
         {/* FAQ */}
         <WaveDividerTop />
-        <section className="bg-[#191BDF] pt-[120px] pb-[160px]">
+        <section className="bg-[#191BDF] pt-[80px] sm:pt-[120px] pb-[100px] sm:pb-[160px]">
           <div className="max-w-6xl mx-auto px-6 text-center">
             <div className="inline-flex items-center justify-center bg-[#FE6807] text-white text-[12px] font-medium uppercase rounded-full px-[10px] py-[2px]">
               FAQ
             </div>
-            <h2 className="mt-[24px] text-[48px] leading-[60px] font-bold tracking-[-0.02em] text-white">
+            <h2 className="mt-[24px] text-[32px] sm:text-[48px] leading-[40px] sm:leading-[60px] font-bold tracking-[-0.02em] text-white">
               {categoryName} FAQs
             </h2>
-            <p className="mt-[20px] max-w-[827px] mx-auto text-[20px] leading-[30px] font-medium text-white/90">
+            <p className="mt-[20px] max-w-[827px] mx-auto text-[18px] sm:text-[20px] leading-[28px] sm:leading-[30px] font-medium text-white/90">
               Find answers to the most common questions about our {categoryName} service.
             </p>
             <div className="mt-[60px] flex flex-col items-center gap-[24px]">
               {faqItems.map((q) => (
-                <div key={q} className="w-full max-w-[750px] min-h-[110px] bg-[#FE6807] rounded-[6px] flex items-center justify-between px-[40px] cursor-pointer">
-                  <span className="text-[20px] leading-[30px] font-bold text-white text-left">{q}</span>
+                <div key={q} className="w-full max-w-[750px] min-h-[80px] sm:min-h-[110px] bg-[#FE6807] rounded-[6px] flex items-center justify-between px-[20px] sm:px-[40px] cursor-pointer">
+                  <span className="text-[16px] sm:text-[20px] leading-[26px] sm:leading-[30px] font-bold text-white text-left">{q}</span>
                   <Image src="/assets/icons/arrow.png" alt="arrow" width={28} height={28} className="w-[28px] h-[28px] object-contain flex-shrink-0" />
                 </div>
               ))}
             </div>
           </div>
-          <WaveDivider />
         </section>
         <WaveDivider />
 
@@ -329,10 +328,10 @@ export default async function CategoryServicePage({
                 <path d="M6 9L12 15L18 9" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
-            <div className="grid grid-cols-3 gap-y-[20px] gap-x-[60px] mt-[32px]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-[20px] gap-x-[40px] lg:gap-x-[60px] mt-[32px]">
               {["Bangkok", "Chiang Mai", "Phuket", "Pattaya", "Hua Hin", "Koh Samui", "Chonburi", "Nonthaburi", "Pathum Thani", "Nakhon Ratchasima", "Khon Kaen", "Udon Thani"].map((city) => (
                 <Link key={city} href={`/services/${category}/${city.toLowerCase().replace(/\s+/g, "-")}`}>
-                  <span className="text-[20px] leading-[30px] font-medium hover:underline cursor-pointer">
+                  <span className="text-[18px] sm:text-[20px] leading-[28px] sm:leading-[30px] font-medium hover:underline cursor-pointer">
                     {categoryName} {city}
                   </span>
                 </Link>
@@ -341,15 +340,15 @@ export default async function CategoryServicePage({
 
             <div className="mt-[80px]">
               <div className="flex items-center justify-between border-b border-white/40 pb-[12px]">
-                <h3 className="text-[30px] leading-[38px] font-medium">Other Services</h3>
+                <h3 className="text-[24px] sm:text-[30px] leading-[32px] sm:leading-[38px] font-medium">Other Services</h3>
                 <svg className="w-[20px] h-[20px]" viewBox="0 0 24 24" fill="none">
                   <path d="M6 9L12 15L18 9" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </div>
-              <div className="grid grid-cols-3 gap-y-[20px] gap-x-[60px] mt-[32px]">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-[20px] gap-x-[40px] lg:gap-x-[60px] mt-[32px]">
                 {["Cleaning", "Handyman", "Massage", "Laundry", "Plumbing", "Tutoring", "Air Conditioner Cleaning", "Air Conditioner Technician", "Delivery", "Moving", "Painting", "Gardening"].map((s) => (
                   <Link key={s} href={`/services/${s.toLowerCase().replace(/\s+/g, "-")}`}>
-                    <span className="text-[20px] leading-[30px] font-medium hover:underline cursor-pointer">{s}</span>
+                    <span className="text-[18px] sm:text-[20px] leading-[28px] sm:leading-[30px] font-medium hover:underline cursor-pointer">{s}</span>
                   </Link>
                 ))}
               </div>
@@ -359,7 +358,7 @@ export default async function CategoryServicePage({
 
         {/* APP DOWNLOAD */}
         <section className="bg-[#FE6807] text-white">
-          <div className="max-w-[1200px] mx-auto px-6 pt-[88px] text-center">
+          <div className="max-w-[1200px] mx-auto px-6 pt-[88px] pb-[88px] text-center">
             <div className="inline-flex items-center justify-center bg-[#191BDF] text-white text-[12px] font-medium rounded-full px-[12px] py-[2px] uppercase">
               FREE TO JOIN
             </div>

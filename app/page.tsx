@@ -116,8 +116,8 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid items-start gap-12 lg:gap-16 lg:grid-cols-2">
               {/* Left: Mobile image */}
-              <div className="order-2 lg:order-1 flex justify-start -ml-8 lg:-ml-56">
-                <div className="w-[420px] sm:w-[480px] lg:w-[540px] xl:w-[600px]">
+              <div className="order-2 lg:order-1 flex justify-center lg:justify-start lg:-ml-56">
+                <div className="w-full max-w-[420px] sm:max-w-[480px] lg:w-[540px] xl:w-[600px]">
                   <Image
                     src="/assets/Group1.png"
                     alt="Gigit mobile app"
