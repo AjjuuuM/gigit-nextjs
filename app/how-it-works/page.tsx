@@ -156,14 +156,14 @@ export default function HowItWorksPage() {
             {/* Mobile layout */}
             <div className="grid grid-cols-2 gap-8 md:hidden">
               {[
-                { icon: "/assets/icons/1.png", title: "Verified\nProfiles", desc: "Know who you're hiring with verified accounts" },
-                { icon: "/assets/icons/2.png", title: "Ratings &\nReviews", desc: "See real feedback before choosing a worker" },
-                { icon: "/assets/icons/3.png", title: "Escrow\nPayments", desc: "No upfront risk – payment released after customer approval." },
-                { icon: "/assets/icons/4.png", title: "Set your\nbudget", desc: "Set your own budget and compare offers to choose the best value" },
-              ].map(({ icon, title, desc }) => (
+                { icon: "/assets/icons/Checkbox.png", title: "Verified\nProfiles", desc: "Know who you're hiring with verified accounts", size: "w-9 h-9" },
+                { icon: "/assets/icons/3.png", title: "Ratings &\nReviews", desc: "See real feedback before choosing a worker", size: "w-6 h-6" },
+                { icon: "/assets/icons/2.png", title: "Escrow\nPayments", desc: "No upfront risk – payment released after customer approval.", size: "w-6 h-6" },
+                { icon: "/assets/icons/4.png", title: "Set your\nbudget", desc: "Set your own budget and compare offers to choose the best value", size: "w-6 h-6" },
+              ].map(({ icon, title, desc, size }) => (
                 <div key={title} className="text-center">
                   <div className="w-14 h-14 mx-auto flex items-center justify-center bg-[#FE6807] rounded-xl">
-                    <Image src={icon} alt="" width={24} height={24} className="w-6 h-6" />
+                    <Image src={icon} alt="" width={36} height={36} className={size} />
                   </div>
                   <h3 className="mt-4 text-[18px] leading-[26px] font-bold text-[#2A3342] whitespace-pre-line">{title}</h3>
                   <p className="mt-2 text-[14px] leading-[22px] font-medium text-[#556987]">{desc}</p>
@@ -174,12 +174,12 @@ export default function HowItWorksPage() {
             <div className="hidden md:grid grid-cols-3 items-center gap-x-10 mt-8">
               <div className="space-y-24">
                 {[
-                  { icon: "/assets/icons/1.png", title: "Verified\nProfiles", desc: "Know who you're hiring with verified accounts" },
-                  { icon: "/assets/icons/2.png", title: "Ratings &\nReviews", desc: "See real feedback before choosing a worker" },
-                ].map(({ icon, title, desc }) => (
+                  { icon: "/assets/icons/Checkbox.png", title: "Verified\nProfiles", desc: "Know who you're hiring with verified accounts", size: "w-9 h-9" },
+                  { icon: "/assets/icons/3.png", title: "Ratings &\nReviews", desc: "See real feedback before choosing a worker", size: "w-6 h-6" },
+                ].map(({ icon, title, desc, size }) => (
                   <div key={title} className="text-center">
                     <div className="w-16 h-16 mx-auto flex items-center justify-center bg-[#FE6807] rounded-xl">
-                      <Image src={icon} alt="" width={24} height={24} className="w-6 h-6" />
+                      <Image src={icon} alt="" width={36} height={36} className={size} />
                     </div>
                     <h3 className="mt-6 text-[24px] leading-[32px] font-bold text-[#2A3342] whitespace-pre-line">{title}</h3>
                     <p className="mt-3 text-[16px] leading-[24px] font-medium text-[#556987]">{desc}</p>
@@ -191,12 +191,12 @@ export default function HowItWorksPage() {
               </div>
               <div className="space-y-24">
                 {[
-                  { icon: "/assets/icons/3.png", title: "Escrow\nPayments", desc: "No upfront risk – payment released after customer approval." },
-                  { icon: "/assets/icons/4.png", title: "Set your\nbudget", desc: "Set your own budget and compare offers to choose the best value" },
-                ].map(({ icon, title, desc }) => (
+                  { icon: "/assets/icons/2.png", title: "Escrow\nPayments", desc: "No upfront risk – payment released after customer approval.", size: "w-6 h-6" },
+                  { icon: "/assets/icons/4.png", title: "Set your\nbudget", desc: "Set your own budget and compare offers to choose the best value", size: "w-6 h-6" },
+                ].map(({ icon, title, desc, size }) => (
                   <div key={title} className="text-center">
                     <div className="w-16 h-16 mx-auto flex items-center justify-center bg-[#FE6807] rounded-xl">
-                      <Image src={icon} alt="" width={24} height={24} className="w-6 h-6" />
+                      <Image src={icon} alt="" width={36} height={36} className={size} />
                     </div>
                     <h3 className="mt-6 text-[24px] leading-[32px] font-bold text-[#2A3342] whitespace-pre-line">{title}</h3>
                     <p className="mt-3 text-[16px] leading-[24px] font-medium text-[#556987]">{desc}</p>
