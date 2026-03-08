@@ -270,7 +270,7 @@ export default function HomePage() {
                 BLOG
               </div>
               <h2 className="mt-6 font-bold text-3xl sm:text-4xl lg:text-[48px] leading-[44px] sm:leading-[52px] lg:leading-[60px] tracking-[-0.02em] text-[#1C232D]">
-                Service &amp; related services blogs
+                {"{service name} & related services blog"}
               </h2>
             </div>
 
