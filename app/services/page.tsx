@@ -29,9 +29,9 @@ export default function ServicesPage() {
           <Navbar />
 
           {/* HERO */}
-          <section className="bg-[#191BDF] text-white pt-16 pb-40 relative overflow-hidden">
+          <section className="bg-[#191BDF] text-white pt-16 pb-24 sm:pb-32 lg:pb-40 relative overflow-hidden">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="grid lg:grid-cols-2 gap-12 items-center relative">
                 {/* Left */}
                 <div>
                   <div className="inline-flex items-center rounded-full bg-[#FE6807] px-4 py-1 text-xs font-semibold uppercase tracking-wide text-white">
@@ -48,7 +48,7 @@ export default function ServicesPage() {
                 </div>
 
                 {/* Right */}
-                <div className="relative flex justify-center lg:justify-end">
+                <div className="relative hidden lg:flex justify-center lg:justify-end">
                   <Image
                     src="/assets/serviceloc.png"
                     alt="Office workspace"
@@ -57,6 +57,16 @@ export default function ServicesPage() {
                     className="relative z-10 rounded-[20px] w-full max-w-[520px]"
                   />
                 </div>
+              </div>
+              {/* Mobile hero image anchored to bottom */}
+              <div className="lg:hidden absolute bottom-6 left-1/2 -translate-x-1/2 w-[78%] max-w-[340px] z-10">
+                <Image
+                  src="/assets/serviceloc.png"
+                  alt="Office workspace"
+                  width={520}
+                  height={400}
+                  className="w-full h-auto rounded-[16px]"
+                />
               </div>
             </div>
 
@@ -70,7 +80,7 @@ export default function ServicesPage() {
 
       <main>
         {/* POPULAR SERVICES */}
-        <section className="bg-white py-16 sm:py-20 lg:py-24">
+        <section className="bg-white pt-20 sm:pt-24 lg:pt-28 pb-16 sm:pb-20 lg:pb-24">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center justify-center rounded-full bg-[#FE6807] px-4 py-1.5 text-[11px] font-semibold uppercase tracking-wide text-white">

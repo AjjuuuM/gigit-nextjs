@@ -1,12 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
+import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export default function ContactUsPage() {
   return (
     <div className="bg-white min-h-screen">
+      <header className="bg-[#F7F8F9]">
+        <div className="max-w-6xl mx-auto px-6">
+          <Navbar />
+        </div>
+      </header>
       <main>
-        <section className="bg-[#F7F8F9] pt-24 pb-28">
+        <section className="bg-[#F7F8F9] pt-10 pb-28">
           <div className="max-w-6xl mx-auto px-6">
             {/* Badge */}
             <div className="inline-flex items-center bg-[#FE6807] text-white text-xs font-medium uppercase rounded-full px-3 py-1">
