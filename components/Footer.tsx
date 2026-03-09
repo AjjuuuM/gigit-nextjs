@@ -30,7 +30,7 @@ export default function Footer() {
               <li><Link href="/how-it-works" className="hover:text-white">Who we are</Link></li>
               <li><Link href="/contact-us" className="hover:text-white">Contact us</Link></li>
               <li><Link href="/#become-hero" className="hover:text-white">Become a gigit hero</Link></li>
-              <li><Link href="/services" className="hover:text-white">Sitemap</Link></li>
+              <li><Link href="/services" className="hover:text-white">Services</Link></li>
             </ul>
           </div>
 

@@ -80,7 +80,7 @@ export default function ServicesPage() {
 
       <main>
         {/* POPULAR SERVICES */}
-        <section className="bg-white pt-20 sm:pt-24 lg:pt-28 pb-16 sm:pb-20 lg:pb-24">
+        <section className="bg-white pt-16 sm:pt-16 pb-16 sm:pb-20 lg:pb-24">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center justify-center rounded-full bg-[#FE6807] px-4 py-1.5 text-[11px] font-semibold uppercase tracking-wide text-white">

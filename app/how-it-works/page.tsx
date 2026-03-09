@@ -154,7 +154,7 @@ export default function HowItWorksPage() {
           {/* Mobile: stacked grid; Desktop: 3-col with phone center */}
           <div className="mt-16 max-w-6xl mx-auto px-6">
             {/* Mobile layout */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:hidden">
+            <div className="grid grid-cols-1 gap-8 md:hidden">
               {[
                 { icon: "/assets/icons/Checkbox.png", title: "Verified\nProfiles", desc: "Know who you're hiring with verified accounts", size: "w-9 h-9" },
                 { icon: "/assets/icons/3.png", title: "Ratings &\nReviews", desc: "See real feedback before choosing a worker", size: "w-6 h-6" },

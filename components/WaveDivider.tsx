@@ -6,13 +6,13 @@ interface WaveDividerProps {
 
 export default function WaveDivider({ flip = false }: WaveDividerProps) {
   return (
-    <div className={flip ? "rotate-180" : ""}>
+    <div className={`block m-0 p-0 leading-none overflow-hidden ${flip ? "rotate-180" : ""}`}>
       <Image
         src="/assets/BGWave.png"
         alt=""
         width={1440}
         height={80}
-        className="w-full block"
+        className="block w-full h-auto m-0 p-0 align-top"
         aria-hidden="true"
       />
     </div>
@@ -21,13 +21,15 @@ export default function WaveDivider({ flip = false }: WaveDividerProps) {
 
 export function WaveDividerTop() {
   return (
-    <Image
-      src="/assets/BGWave-top.png"
-      alt=""
-      width={1440}
-      height={80}
-      className="w-full block"
-      aria-hidden="true"
-    />
+    <div className="block m-0 p-0 leading-none overflow-hidden">
+      <Image
+        src="/assets/BGWave-top.png"
+        alt=""
+        width={1440}
+        height={80}
+        className="block w-full h-auto m-0 p-0 align-top"
+        aria-hidden="true"
+      />
+    </div>
   );
 }

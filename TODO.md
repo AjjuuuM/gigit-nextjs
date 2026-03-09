@@ -1,0 +1,6 @@
+- [x] Fix global white line for curve/wave in shared component (`components/WaveDivider.tsx`)
+- [x] Add controlled top spacing after curve in `app/services/page.tsx` (In Demand Services / Services)
+- [x] Remove service page sitemap exposure from `components/Footer.tsx`
+- [x] Harden Contact Us icon image loading in `app/contact-us/page.tsx`
+- [x] Verify policy pages use shared `PolicyLayout` with header (already in use, confirm)
+- [ ] Run lint and finalize

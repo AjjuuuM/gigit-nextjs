@@ -36,13 +36,7 @@ export default function ContactUsPage() {
                 {/* LINE */}
                 <div className="flex items-center gap-6">
                   <div className="w-14 h-14 rounded-full bg-[#FE6807] flex items-center justify-center">
-                    <Image
-                      src="/assets/icons/vector.png"
-                      alt="Line Icon"
-                      width={24}
-                      height={24}
-                      className="w-6 h-6 object-contain"
-                    />
+                    <i className="fa-brands fa-line text-white text-[24px]" aria-hidden="true"></i>
                   </div>
                   <div>
                     <h4 className="text-[30px] leading-[38px] font-bold text-[#2A3342]">Line</h4>
@@ -53,13 +47,7 @@ export default function ContactUsPage() {
                 {/* SOCIALS */}
                 <div className="flex items-center gap-6">
                   <div className="w-14 h-14 rounded-full bg-[#FE6807] flex items-center justify-center">
-                    <Image
-                      src="/assets/icons/outline.png"
-                      alt="Social Icon"
-                      width={24}
-                      height={24}
-                      className="w-6 h-6 object-contain"
-                    />
+                    <i className="fa-solid fa-hashtag text-white text-[22px]" aria-hidden="true"></i>
                   </div>
                   <div>
                     <h4 className="text-[30px] leading-[38px] font-bold text-[#2A3342]">Socials</h4>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -35,7 +36,7 @@ export default function HomePage() {
           <Navbar />
 
           {/* HERO */}
-          <section className="pt-6 pb-12 sm:pt-10 sm:pb-16 lg:pt-14 lg:pb-0">
+          <section className="relative pt-6 pb-56 sm:pt-10 sm:pb-64 lg:pt-14 lg:pb-72">
             <div className="max-w-3xl mx-auto text-center">
               <div className="inline-flex items-center gap-2 rounded-full bg-[#FE6807] px-4 py-1 text-xs font-semibold tracking-wide uppercase text-white">
                 <span>Welcome</span>
@@ -52,7 +53,7 @@ export default function HomePage() {
             </div>
 
             {/* Hero Image */}
-            <div className="mt-10 flex justify-center">
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full flex justify-center">
               <div className="relative w-full max-w-3xl">
                 <Image
                   src="/assets/iPhone1.png"
@@ -107,8 +108,10 @@ export default function HomePage() {
         </section>
 
         {/* WAVE */}
-        <section className="pt-12">
-          <WaveDividerTop />
+        <section className="m-0 p-0">
+          <div className="block leading-none m-0 p-0">
+            <WaveDividerTop />
+          </div>
         </section>
 
         {/* WHAT IS GIGIT (BLUE) */}
@@ -169,7 +172,7 @@ export default function HomePage() {
         <WaveDivider />
 
         {/* POPULAR SERVICES */}
-        <section className="bg-white">
+        <section className="bg-white pt-10 sm:pt-10">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center justify-center rounded-full bg-[#FE6807] px-4 py-1.5 text-[11px] font-semibold uppercase tracking-wide text-white">
@@ -210,12 +213,12 @@ export default function HomePage() {
           </div>
 
           {/* WAVE */}
-          <div className="pt-12">
+          <div className="pt-10">
             <WaveDividerTop />
           </div>
 
           {/* TESTIMONIALS */}
-          <section className="bg-[#191BDF] text-white pb-20">
+          <section className="bg-[#191BDF] text-white pt-10 pb-20">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="max-w-3xl">
                 <div className="inline-flex items-center justify-center rounded-full bg-[#FE6807] px-4 py-1.5 text-[11px] font-semibold uppercase tracking-wide text-white">
